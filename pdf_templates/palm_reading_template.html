@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palm Reading - Wildflowers Tarot</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333333;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #6b4e71;
+            padding-bottom: 20px;
+        }
+        
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            color: #6b4e71;
+            margin: 0;
+        }
+        
+        .tagline {
+            font-style: italic;
+            color: #a67c52;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            color: #2e2639;
+        }
+        
+        .reading-info {
+            background-color: #f5f0f6;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .reading-info p {
+            margin: 5px 0;
+        }
+        
+        .palm-images {
+            display: flex;
+            justify-content: space-between;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+        
+        .palm-image-container {
+            width: 48%;
+            margin-bottom: 20px;
+        }
+        
+        .palm-image {
+            width: 100%;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+        
+        .palm-image-caption {
+            text-align: center;
+            margin-top: 10px;
+            font-style: italic;
+        }
+        
+        .analysis-section {
+            margin: 30px 0;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .analysis-title {
+            color: #6b4e71;
+            border-bottom: 1px solid #a67c52;
+            padding-bottom: 5px;
+        }
+        
+        .footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+        }
+        
+        .disclaimer {
+            font-size: 11px;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="logo">Wildflowers Tarot</h1>
+            <p class="tagline">Spiritual guidance for life's journey</p>
+        </div>
+        
+        <h1>Your Palm Reading</h1>
+        
+        <div class="reading-info">
+            <p><strong>Order ID:</strong> {{ order_id }}</p>
+            <p><strong>Name:</strong> {{ customer_name }}</p>
+            <p><strong>Dominant Hand:</strong> {{ dominant_hand }}</p>
+            {% if birth_date %}
+            <p><strong>Birth Date:</strong> {{ birth_date }}</p>
+            {% endif %}
+            <p><strong>Reading Date:</strong> {{ reading_date }}</p>
+        </div>
+        
+        {% if focus_areas %}
+        <div class="focus-areas">
+            <p><strong>Areas of Focus:</strong> {{ focus_areas }}</p>
+        </div>
+        {% endif %}
+        
+        <div class="reading-intro">
+            <p>Dear {{ customer_name }},</p>
+            <p>Thank you for choosing Wildflowers Tarot for your palm reading. The lines and features of your hands tell a unique story about your life path, personality, and potential future. This analysis is based on the photos you provided and traditional palmistry principles.</p>
+        </div>
+        
+        <div class="palm-images">
+            {% for image in palm_images %}
+            <div class="palm-image-container">
+                <img src="{{ image.path }}" alt="{{ image.caption }}" class="palm-image">
+                <p class="palm-image-caption">{{ image.caption }}</p>
+            </div>
+            {% endfor %}
+        </div>
+        
+        <div class="analysis-sections">
+            <h2>Your Palm Analysis</h2>
+            
+            {% if analysis.life_line %}
+            <div class="analysis-section">
+                <h3 class="analysis-title">Life Line</h3>
+                <p>{{ analysis.life_line }}</p>
+            </div>
+            {% endif %}
+            
+            {% if analysis.heart_line %}
+            <div class="analysis-section">
+                <h3 class="analysis-title">Heart Line</h3>
+                <p>{{ analysis.heart_line }}</p>
+            </div>
+            {% endif %}
+            
+            {% if analysis.head_line %}
+            <div class="analysis-section">
+                <h3 class="analysis-title">Head Line</h3>
+                <p>{{ analysis.head_line }}</p>
+            </div>
+            {% endif %}
+            
+            {% if analysis.fate_line %}
+            <div class="analysis-section">
+                <h3 class="analysis-title">Fate Line</h3>
+                <p>{{ analysis.fate_line }}</p>
+            </div>
+            {% endif %}
+            
+            {% if analysis.mounts %}
+            <div class="analysis-section">
+                <h3 class="analysis-title">Mounts and Special Markings</h3>
+                <p>{{ analysis.mounts }}</p>
+            </div>
+            {% endif %}
+            
+            {% if analysis.overall %}
+            <div class="analysis-section">
+                <h3 class="analysis-title">Overall Interpretation</h3>
+                <p>{{ analysis.overall }}</p>
+            </div>
+            {% endif %}
+        </div>
+        
+        <div class="reading-conclusion">
+            <h2>Reading Summary</h2>
+            <p>This palm reading offers insights into your natural tendencies, strengths, and potential challenges. Remember that palmistry is a guide rather than a fixed destiny. The lines on your hands can change over time, reflecting your personal growth and life choices.</p>
+            <p>I hope this reading provides valuable guidance for your journey. If you have any questions about your reading, please don't hesitate to contact us.</p>
+        </div>
+        
+        <div class="footer">
+            <p>Wildflowers Tarot &copy; {{ generation_date }}</p>
+            <p>www.wildflowerstarot.com | info@wildflowerstarot.com</p>
+        </div>
+        
+        <div class="disclaimer">
+            <p>Disclaimer: Palm readings are for entertainment and spiritual guidance purposes only. They are not intended to replace professional advice in legal, financial, medical, or psychological matters. All decisions and actions taken based on this reading are ultimately your responsibility.</p>
+        </div>
+    </div>
+</body>
+</html>

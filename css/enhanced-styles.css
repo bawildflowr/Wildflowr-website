@@ -1,0 +1,701 @@
+/* Additional Styles for Wildflowers Tarot Website */
+
+/* Brand Colors */
+:root {
+    --primary-color: #6b4e71; /* Deep Purple */
+    --secondary-color: #a67c52; /* Warm Gold */
+    --accent-color: #d4af37; /* Bright Gold */
+    --light-color: #f5f0f6; /* Light Purple */
+    --dark-color: #2e2639; /* Dark Purple */
+    --text-color: #333333;
+    --background-color: #ffffff;
+    --error-color: #d9534f;
+    --success-color: #5cb85c;
+    --mystical-blue: #4a6e8a; /* Additional accent */
+    --earth-green: #5b7b65; /* Additional accent */
+}
+
+/* Typography Enhancements */
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    background-image: url('../images/subtle-pattern.png');
+    background-repeat: repeat;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 1rem;
+    color: var(--dark-color);
+}
+
+.logo h1 {
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Enhanced Header */
+header {
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.main-nav a {
+    position: relative;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: var(--accent-color);
+    transition: width 0.3s ease;
+}
+
+.main-nav a:hover:after,
+.main-nav a.active:after {
+    width: 100%;
+}
+
+/* Enhanced Hero Section */
+.hero {
+    background: linear-gradient(rgba(46, 38, 57, 0.8), rgba(46, 38, 57, 0.8)), url('../images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 120px 0;
+    position: relative;
+}
+
+.hero:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../images/stars-overlay.png');
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.hero h2 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    color: white;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Enhanced Buttons */
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    z-index: -1;
+}
+
+.btn:hover:after {
+    height: 100%;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+    box-shadow: 0 4px 15px rgba(107, 78, 113, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(107, 78, 113, 0.4);
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: white;
+    box-shadow: 0 4px 15px rgba(166, 124, 82, 0.3);
+}
+
+.btn-secondary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(166, 124, 82, 0.4);
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.btn-outline:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* Enhanced Service Cards */
+.service-card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    padding: 40px 30px;
+    text-align: center;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.service-card:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    z-index: -1;
+}
+
+.service-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.service-icon {
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 25px;
+    transition: all 0.4s ease;
+}
+
+.service-card:hover .service-icon {
+    transform: scale(1.1);
+}
+
+/* Enhanced Steps */
+.step {
+    text-align: center;
+    padding: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.step:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -15px;
+    width: 30px;
+    height: 2px;
+    background-color: var(--accent-color);
+    z-index: -1;
+}
+
+.step:last-child:after {
+    display: none;
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--primary-color), var(--dark-color));
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(46, 38, 57, 0.3);
+}
+
+/* Enhanced Testimonials */
+.testimonial {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    padding: 40px;
+    margin: 20px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.testimonial:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.testimonial:before {
+    content: '"';
+    font-family: 'Playfair Display', serif;
+    font-size: 6rem;
+    color: var(--light-color);
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    z-index: 0;
+    opacity: 0.5;
+}
+
+.testimonial-content {
+    position: relative;
+    z-index: 1;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.testimonial-author {
+    text-align: right;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+/* Enhanced CTA Section */
+.cta {
+    background: linear-gradient(rgba(46, 38, 57, 0.9), rgba(46, 38, 57, 0.9)), url('../images/cta-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+    position: relative;
+}
+
+.cta:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../images/stars-overlay.png');
+    opacity: 0.2;
+    pointer-events: none;
+}
+
+.cta h2 {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Enhanced Footer */
+footer {
+    background-color: var(--dark-color);
+    color: white;
+    padding: 80px 0 20px;
+    position: relative;
+}
+
+footer:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color), var(--accent-color));
+}
+
+.footer-logo h2 {
+    color: white;
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+}
+
+.footer-links h3,
+.footer-services h3,
+.footer-contact h3 {
+    color: var(--accent-color);
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-links h3:after,
+.footer-services h3:after,
+.footer-contact h3:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background-color: var(--secondary-color);
+}
+
+footer ul li {
+    margin-bottom: 12px;
+    transition: all 0.3s ease;
+}
+
+footer ul li:hover {
+    transform: translateX(5px);
+}
+
+footer a {
+    color: #cccccc;
+    transition: all 0.3s ease;
+}
+
+footer a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-5px);
+}
+
+/* Enhanced Page Headers */
+.page-header {
+    background: linear-gradient(rgba(46, 38, 57, 0.8), rgba(46, 38, 57, 0.8)), url('../images/page-header-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 80px 0;
+    position: relative;
+}
+
+.page-header:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../images/stars-overlay.png');
+    opacity: 0.2;
+    pointer-events: none;
+}
+
+.page-header h1 {
+    color: white;
+    margin-bottom: 15px;
+    font-size: 3rem;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Enhanced Tarot Spreads */
+.spread-card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: all 0.4s ease;
+    position: relative;
+}
+
+.spread-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.spread-header {
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    background-color: var(--light-color);
+}
+
+.spread-price {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.spread-image {
+    padding: 30px;
+    text-align: center;
+    background-color: white;
+}
+
+.spread-description {
+    padding: 0 25px 25px;
+}
+
+.spread-card .btn {
+    display: block;
+    margin: 0;
+    border-radius: 0;
+    padding: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* Enhanced Card Selection */
+.tarot-card {
+    aspect-ratio: 3/5;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.4s ease;
+    position: relative;
+}
+
+.tarot-card:hover {
+    transform: translateY(-15px) rotate(2deg);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.tarot-card.selected {
+    border: 3px solid var(--accent-color);
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+}
+
+/* Enhanced Upload Area */
+.upload-area {
+    border: 2px dashed var(--primary-color);
+    border-radius: 12px;
+    padding: 40px 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: var(--light-color);
+}
+
+.upload-area:hover, 
+.upload-area.highlight {
+    background-color: rgba(107, 78, 113, 0.1);
+    border-color: var(--accent-color);
+}
+
+.upload-area i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+/* Enhanced Form Elements */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: #f9f9f9;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(107, 78, 113, 0.1);
+    background-color: white;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: var(--dark-color);
+}
+
+.form-help {
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* Enhanced Order Summary */
+.order-summary {
+    background-color: var(--light-color);
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.order-summary h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(107, 78, 113, 0.2);
+}
+
+/* Enhanced Confirmation */
+.confirmation-content {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    padding: 50px;
+    text-align: center;
+}
+
+.confirmation-icon {
+    font-size: 5rem;
+    color: var(--success-color);
+    margin-bottom: 25px;
+}
+
+.confirmation-details {
+    background-color: var(--light-color);
+    padding: 25px;
+    border-radius: 8px;
+    margin: 25px 0;
+    text-align: left;
+}
+
+/* Animation Effects */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease forwards;
+}
+
+.slide-up {
+    animation: slideUp 0.8s ease forwards;
+}
+
+/* Responsive Enhancements */
+@media (max-width: 992px) {
+    .hero h2 {
+        font-size: 2.8rem;
+    }
+    
+    .step:after {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero h2 {
+        font-size: 2.2rem;
+    }
+    
+    .hero p {
+        font-size: 1.1rem;
+    }
+    
+    .btn {
+        padding: 10px 20px;
+    }
+    
+    .service-card,
+    .spread-card,
+    .testimonial {
+        padding: 25px;
+    }
+    
+    .upload-container {
+        flex-direction: column;
+    }
+    
+    .upload-box {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Loading Spinner */
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid rgba(107, 78, 113, 0.1);
+    border-radius: 50%;
+    border-top-color: var(--primary-color);
+    animation: spin 1s ease-in-out infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--dark-color);
+}

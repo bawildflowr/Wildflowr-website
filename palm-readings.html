@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palm Readings - Wildflowers Tarot</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Wildflowers Tarot</h1>
+            </div>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li class="dropdown">
+                        <a href="services.html">Services</a>
+                        <ul class="dropdown-content">
+                            <li><a href="tarot-readings.html">Tarot Readings</a></li>
+                            <li><a href="palm-readings.html" class="active">Palm Readings</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="user-actions">
+                <a href="account.html" class="account-link"><i class="fas fa-user"></i></a>
+                <button class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Palm Readings</h1>
+                <p>Discover the story written in your hands</p>
+            </div>
+        </section>
+
+        <section class="palm-intro">
+            <div class="container">
+                <div class="two-column">
+                    <div class="column-content">
+                        <h2>The Art of Palmistry</h2>
+                        <p>Palmistry, also known as chiromancy, is the ancient practice of interpreting the lines and features of a person's hands to reveal character traits and predict future events. The lines, mounts, and shapes of your hands can provide insights into your personality, relationships, career path, and life journey.</p>
+                        <p>At Wildflowers Tarot, we offer detailed palm readings through our convenient photo upload service. Simply upload clear images of your palms, and our experienced palmist will analyze them and provide you with a comprehensive reading delivered as a beautiful PDF document.</p>
+                    </div>
+                    <div class="column-image">
+                        <img src="images/palm-reading.jpg" alt="Palm Reading Illustration">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="palm-reading-service">
+            <div class="container">
+                <h2 class="section-title">Our Palm Reading Service</h2>
+                <p class="section-description">Upload photos of your palms and receive a detailed analysis of the unique story written in your hands.</p>
+                
+                <div class="service-details">
+                    <div class="service-card">
+                        <div class="service-header">
+                            <h3>Complete Palm Reading</h3>
+                            <div class="service-price">$35</div>
+                        </div>
+                        <div class="service-content">
+                            <p>Our comprehensive palm reading includes analysis of:</p>
+                            <ul>
+                                <li>Major lines (Heart, Head, Life, Fate)</li>
+                                <li>Minor lines (Marriage, Health, Travel)</li>
+                                <li>Mounts and their significance</li>
+                                <li>Hand shape and finger analysis</li>
+                                <li>Personalized interpretation and guidance</li>
+                            </ul>
+                            <p>You'll receive a detailed PDF report with annotated images of your palms and a thorough explanation of what they reveal about your past, present, and potential future.</p>
+                            <button class="btn btn-primary" id="start-palm-reading-btn">Start Your Palm Reading</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="how-to-photograph">
+            <div class="container">
+                <h2 class="section-title">How to Photograph Your Palms</h2>
+                <p class="section-description">For the most accurate reading, please follow these guidelines when taking photos of your palms.</p>
+                
+                <div class="photo-guidelines">
+                    <div class="guideline-item">
+                        <div class="guideline-image">
+                            <img src="images/palm-photo-guide-1.jpg" alt="Palm Photography Guide 1">
+                        </div>
+                        <div class="guideline-content">
+                            <h3>1. Good Lighting</h3>
+                            <p>Take photos in natural daylight or well-lit conditions. Avoid harsh shadows or overly bright light that can wash out details.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="guideline-item">
+                        <div class="guideline-image">
+                            <img src="images/palm-photo-guide-2.jpg" alt="Palm Photography Guide 2">
+                        </div>
+                        <div class="guideline-content">
+                            <h3>2. Clear, Focused Images</h3>
+                            <p>Ensure your camera is focused on your palm. The lines should be clearly visible and not blurry.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="guideline-item">
+                        <div class="guideline-image">
+                            <img src="images/palm-photo-guide-3.jpg" alt="Palm Photography Guide 3">
+                        </div>
+                        <div class="guideline-content">
+                            <h3>3. Both Hands</h3>
+                            <p>Take photos of both your dominant and non-dominant hands, palms facing the camera with fingers slightly spread.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="guideline-item">
+                        <div class="guideline-image">
+                            <img src="images/palm-photo-guide-4.jpg" alt="Palm Photography Guide 4">
+                        </div>
+                        <div class="guideline-content">
+                            <h3>4. Clean Hands</h3>
+                            <p>Ensure your hands are clean and free from temporary markings, makeup, or henna that could obscure the natural lines.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Palm Reading Upload Form (Initially Hidden) -->
+        <section class="palm-upload-form" id="palm-upload-section" style="display: none;">
+            <div class="container">
+                <h2 class="section-title">Upload Your Palm Photos</h2>
+                <p class="section-description">Please upload clear photos of both your palms following the guidelines above.</p>
+                
+                <form id="palm-reading-form" class="upload-form">
+                    <div class="upload-container">
+                        <div class="upload-box" id="dominant-hand-upload">
+                            <h3>Dominant Hand</h3>
+                            <p class="upload-instruction">This is usually your writing hand</p>
+                            <div class="upload-area" id="dominant-hand-dropzone">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                                <p>Drag & drop your image here or click to browse</p>
+                                <input type="file" id="dominant-hand-input" accept="image/*" hidden>
+                            </div>
+                            <div class="upload-preview" id="dominant-hand-preview" style="display: none;">
+                                <img id="dominant-hand-img" src="#" alt="Dominant Hand Preview">
+                                <button type="button" class="btn btn-small remove-image" data-target="dominant">Remove</button>
+                            </div>
+                        </div>
+                        
+                        <div class="upload-box" id="non-dominant-hand-upload">
+                            <h3>Non-Dominant Hand</h3>
+                            <p class="upload-instruction">Your other hand</p>
+                            <div class="upload-area" id="non-dominant-hand-dropzone">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                                <p>Drag & drop your image here or click to browse</p>
+                                <input type="file" id="non-dominant-hand-input" accept="image/*" hidden>
+                            </div>
+                            <div class="upload-preview" id="non-dominant-hand-preview" style="display: none;">
+                                <img id="non-dominant-hand-img" src="#" alt="Non-Dominant Hand Preview">
+                                <button type="button" class="btn btn-small remove-image" data-target="non-dominant">Remove</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="dominant-hand">Which is your dominant hand?</label>
+                        <select id="dominant-hand" name="dominant-hand" required>
+                            <option value="">Please select</option>
+                            <option value="right">Right</option>
+                            <option value="left">Left</option>
+                            <option value="ambidextrous">Ambidextrous</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="birth-date">Date of Birth (Optional)</label>
+                        <input type="date" id="birth-date" name="birth-date">
+                        <p class="form-help">This helps provide context for your reading</p>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="reading-focus">What would you like your reading to focus on? (Optional)</label>
+                        <textarea id="reading-focus" name="reading-focus" rows="3" placeholder="E.g., career, relationships, life path, etc."></textarea>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary" id="cancel-upload-btn">Cancel</button>
+                        <button type="button" class="btn btn-primary" id="continue-to-checkout-btn" disabled>Continue to Checkout</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Order Form Section (Initially Hidden) -->
+        <section class="order-form" id="palm-order-form-section" style="display: none;">
+            <div class="container">
+                <h2 class="section-title">Complete Your Palm Reading Order</h2>
+                
+                <div class="order-summary">
+                    <h3>Order Summary</h3>
+                    <div class="summary-details">
+                        <p>Service: Complete Palm Reading</p>
+                        <p>Price: $35</p>
+                    </div>
+                </div>
+                
+                <form id="palm-order-form">
+                    <div class="form-group">
+                        <label for="palm-email">Email Address*</label>
+                        <input type="email" id="palm-email" name="email" required placeholder="Your reading will be delivered to this email">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="palm-name">Your Name*</label>
+                        <input type="text" id="palm-name" name="name" required placeholder="As you'd like it to appear on your reading">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" id="palm-create-account" name="create-account">
+                            Create an account to save your readings
+                        </label>
+                    </div>
+                    
+                    <div class="account-fields" id="palm-account-fields" style="display: none;">
+                        <div class="form-group">
+                            <label for="palm-password">Password*</label>
+                            <input type="password" id="palm-password" name="password" placeholder="Create a password">
+                        </div>
+                        <div class="form-group">
+                            <label for="palm-confirm-password">Confirm Password*</label>
+                            <input type="password" id="palm-confirm-password" name="confirm-password" placeholder="Confirm your password">
+                        </div>
+                    </div>
+                    
+                    <div class="payment-section">
+                        <h3>Payment Information</h3>
+                        <div class="form-group">
+                            <label for="palm-card-number">Card Number*</label>
+                            <input type="text" id="palm-card-number" name="card-number" required placeholder="1234 5678 9012 3456">
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group half">
+                                <label for="palm-expiry-date">Expiry Date*</label>
+                                <input type="text" id="palm-expiry-date" name="expiry-date" required placeholder="MM/YY">
+                            </div>
+                            <div class="form-group half">
+                                <label for="palm-cvv">CVV*</label>
+                                <input type="text" id="palm-cvv" name="cvv" required placeholder="123">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="palm-card-name">Name on Card*</label>
+                            <input type="text" id="palm-card-name" name="card-name" required placeholder="As it appears on your card">
+                        </div>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary" id="back-to-upload-btn">Back to Upload</button>
+                        <button type="submit" class="btn btn-primary" id="complete-palm-order-btn">Complete Order</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Order Confirmation Section (Initially Hidden) -->
+        <section class="order-confirmation" id="palm-confirmation-section" style="display: none;">
+            <div class="container">
+                <div class="confirmation-content">
+                    <div class="confirmation-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h2>Thank You for Your Order!</h2>
+                    <p>Your palm reading has been successfully ordered.</p>
+                    <div class="confirmation-details">
+                        <p>Order Number: <span id="palm-confirmation-order-number">WFT12345</span></p>
+                        <p>Your reading will be delivered to <span id="palm-confirmation-email">your@email.com</span> within 48 hours.</p>
+                    </div>
+                    <p>We've also sent a confirmation email with these details.</p>
+                    <div class="confirmation-actions">
+                        <a href="index.html" class="btn btn-secondary">Return to Home</a>
+                        <a href="account.html" class="btn btn-primary" id="palm-view-account-btn">View Your Account</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-preview">
+            <div class="container">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <div class="faq-items">
+                    <div class="faq-item">
+                        <h3>How long will it take to receive my palm reading?</h3>
+                        <p>You will receive your palm reading PDF via email within 48 hours of placing your order.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>What if my palm photos aren't clear enough?</h3>
+                        <p>If we can't provide an accurate reading from your photos, we'll contact you with instructions for better images. No additional charge will be made.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Do I need to provide both hands?</h3>
+                        <p>Yes, for a complete reading we need to see both your dominant and non-dominant hands, as they reveal different aspects of your life.</p>
+                    </div>
+                </div>
+                <div class="faq-more">
+                    <a href="faq.html" class="btn btn-outline">View All FAQs</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="container">
+                <h2>Discover What Your Hands Reveal</h2>
+                <p>Upload photos of your palms today and gain insights into your life path, relationships, and potential.</p>
+                <button class="btn btn-primary" id="cta-start-palm-reading-btn">Start Your Palm Reading</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Wildflowers Tarot</h2>
+                    <p>Spiritual guidance for life's journey</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-services">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="tarot-readings.html">Tarot Readings</a></li>
+                        <li><a href="palm-readings.html">Palm Readings</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p>Email: info@wildflowerstarot.com</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Wildflowers Tarot. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms-of-service.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/palm-readings.js"></script>
+</body>
+</html>

@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarot Readings - Wildflowers Tarot</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Wildflowers Tarot</h1>
+            </div>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li class="dropdown">
+                        <a href="services.html">Services</a>
+                        <ul class="dropdown-content">
+                            <li><a href="tarot-readings.html" class="active">Tarot Readings</a></li>
+                            <li><a href="palm-readings.html">Palm Readings</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="user-actions">
+                <a href="account.html" class="account-link"><i class="fas fa-user"></i></a>
+                <button class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Tarot Readings</h1>
+                <p>Gain insight and clarity through our personalized tarot readings</p>
+            </div>
+        </section>
+
+        <section class="tarot-intro">
+            <div class="container">
+                <div class="two-column">
+                    <div class="column-content">
+                        <h2>The Art of Tarot</h2>
+                        <p>Tarot cards have been used for centuries as a tool for spiritual guidance and self-discovery. Each card contains symbols and archetypes that can help illuminate your path and provide insights into your past, present, and future.</p>
+                        <p>At Wildflowers Tarot, we offer thoughtful, intuitive readings that help you navigate life's challenges and opportunities. Our readings are delivered as beautiful PDF documents sent directly to your email, allowing you to reflect on the guidance at your own pace.</p>
+                    </div>
+                    <div class="column-image">
+                        <img src="images/tarot-cards.jpg" alt="Tarot Cards Spread">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="tarot-spreads">
+            <div class="container">
+                <h2 class="section-title">Choose Your Tarot Spread</h2>
+                <p class="section-description">Select the spread that best suits your needs. Each option offers different insights and depth.</p>
+                
+                <div class="spreads-container">
+                    <div class="spread-card" id="spread-1">
+                        <div class="spread-header">
+                            <h3>Single Card Reading</h3>
+                            <div class="spread-price">$11</div>
+                        </div>
+                        <div class="spread-image">
+                            <img src="images/single-card.svg" alt="Single Card Spread">
+                        </div>
+                        <div class="spread-description">
+                            <p>Perfect for a quick insight or daily guidance. This simple yet powerful reading focuses on a specific question or situation.</p>
+                        </div>
+                        <button class="btn btn-primary select-spread-btn" data-spread="single" data-price="11">Select This Spread</button>
+                    </div>
+
+                    <div class="spread-card" id="spread-2">
+                        <div class="spread-header">
+                            <h3>Two Card Reading</h3>
+                            <div class="spread-price">$15</div>
+                        </div>
+                        <div class="spread-image">
+                            <img src="images/two-card.svg" alt="Two Card Spread">
+                        </div>
+                        <div class="spread-description">
+                            <p>Explore contrasting aspects of a situation with this balanced reading. Ideal for examining choices or comparing options.</p>
+                        </div>
+                        <button class="btn btn-primary select-spread-btn" data-spread="two-card" data-price="15">Select This Spread</button>
+                    </div>
+
+                    <div class="spread-card" id="spread-3">
+                        <div class="spread-header">
+                            <h3>Three Card Reading</h3>
+                            <div class="spread-price">$20</div>
+                        </div>
+                        <div class="spread-image">
+                            <img src="images/three-card.svg" alt="Three Card Spread">
+                        </div>
+                        <div class="spread-description">
+                            <p>Our popular past-present-future spread provides a timeline view of your situation, revealing influences and potential outcomes.</p>
+                        </div>
+                        <button class="btn btn-primary select-spread-btn" data-spread="three-card" data-price="20">Select This Spread</button>
+                    </div>
+
+                    <div class="spread-card" id="spread-5">
+                        <div class="spread-header">
+                            <h3>Five Card Reading</h3>
+                            <div class="spread-price">$30</div>
+                        </div>
+                        <div class="spread-image">
+                            <img src="images/five-card.svg" alt="Five Card Spread">
+                        </div>
+                        <div class="spread-description">
+                            <p>A comprehensive reading that explores multiple aspects of your question, including hidden influences and potential outcomes.</p>
+                        </div>
+                        <button class="btn btn-primary select-spread-btn" data-spread="five-card" data-price="30">Select This Spread</button>
+                    </div>
+
+                    <div class="spread-card" id="spread-celtic">
+                        <div class="spread-header">
+                            <h3>Celtic Cross</h3>
+                            <div class="spread-price">$45</div>
+                        </div>
+                        <div class="spread-image">
+                            <img src="images/celtic-cross.svg" alt="Celtic Cross Spread">
+                        </div>
+                        <div class="spread-description">
+                            <p>Our most detailed reading using the classic 10-card Celtic Cross spread. Provides deep insights into complex situations and life paths.</p>
+                        </div>
+                        <button class="btn btn-primary select-spread-btn" data-spread="celtic-cross" data-price="45">Select This Spread</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Card Selection Section (Initially Hidden) -->
+        <section class="card-selection" id="card-selection-section" style="display: none;">
+            <div class="container">
+                <h2 class="section-title">Select Your Cards</h2>
+                <p class="selection-instructions">Focus on your question as you select your cards. Click on the cards below to make your selection.</p>
+                
+                <div class="spread-info">
+                    <p>Selected Spread: <span id="selected-spread-name">Single Card</span></p>
+                    <p>Cards to Select: <span id="cards-to-select">1</span></p>
+                    <p>Cards Selected: <span id="cards-selected">0</span></p>
+                </div>
+                
+                <div class="tarot-deck" id="tarot-deck">
+                    <!-- Cards will be generated dynamically with JavaScript -->
+                </div>
+                
+                <div class="selected-cards" id="selected-cards-container">
+                    <h3>Your Selected Cards</h3>
+                    <div class="selected-cards-display" id="selected-cards-display">
+                        <!-- Selected cards will appear here -->
+                    </div>
+                </div>
+                
+                <div class="card-selection-actions">
+                    <button class="btn btn-secondary" id="reset-selection-btn">Reset Selection</button>
+                    <button class="btn btn-primary" id="continue-to-checkout-btn" disabled>Continue to Checkout</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Order Form Section (Initially Hidden) -->
+        <section class="order-form" id="order-form-section" style="display: none;">
+            <div class="container">
+                <h2 class="section-title">Complete Your Reading Order</h2>
+                
+                <div class="order-summary">
+                    <h3>Order Summary</h3>
+                    <div class="summary-details">
+                        <p>Spread Type: <span id="summary-spread-type">Single Card</span></p>
+                        <p>Number of Cards: <span id="summary-card-count">1</span></p>
+                        <p>Price: $<span id="summary-price">11</span></p>
+                    </div>
+                </div>
+                
+                <form id="reading-order-form">
+                    <div class="form-group">
+                        <label for="question">Your Question or Focus (Optional)</label>
+                        <textarea id="question" name="question" rows="3" placeholder="What specific question or area of life would you like this reading to focus on?"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address*</label>
+                        <input type="email" id="email" name="email" required placeholder="Your reading will be delivered to this email">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="name">Your Name*</label>
+                        <input type="text" id="name" name="name" required placeholder="As you'd like it to appear on your reading">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" id="create-account" name="create-account">
+                            Create an account to save your readings
+                        </label>
+                    </div>
+                    
+                    <div class="account-fields" id="account-fields" style="display: none;">
+                        <div class="form-group">
+                            <label for="password">Password*</label>
+                            <input type="password" id="password" name="password" placeholder="Create a password">
+                        </div>
+                        <div class="form-group">
+                            <label for="confirm-password">Confirm Password*</label>
+                            <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password">
+                        </div>
+                    </div>
+                    
+                    <div class="payment-section">
+                        <h3>Payment Information</h3>
+                        <div class="form-group">
+                            <label for="card-number">Card Number*</label>
+                            <input type="text" id="card-number" name="card-number" required placeholder="1234 5678 9012 3456">
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group half">
+                                <label for="expiry-date">Expiry Date*</label>
+                                <input type="text" id="expiry-date" name="expiry-date" required placeholder="MM/YY">
+                            </div>
+                            <div class="form-group half">
+                                <label for="cvv">CVV*</label>
+                                <input type="text" id="cvv" name="cvv" required placeholder="123">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="card-name">Name on Card*</label>
+                            <input type="text" id="card-name" name="card-name" required placeholder="As it appears on your card">
+                        </div>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary" id="back-to-selection-btn">Back to Card Selection</button>
+                        <button type="submit" class="btn btn-primary" id="complete-order-btn">Complete Order</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Order Confirmation Section (Initially Hidden) -->
+        <section class="order-confirmation" id="order-confirmation-section" style="display: none;">
+            <div class="container">
+                <div class="confirmation-content">
+                    <div class="confirmation-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h2>Thank You for Your Order!</h2>
+                    <p>Your tarot reading has been successfully ordered.</p>
+                    <div class="confirmation-details">
+                        <p>Order Number: <span id="confirmation-order-number">WFT12345</span></p>
+                        <p>Your reading will be delivered to <span id="confirmation-email">your@email.com</span> within 24 hours.</p>
+                    </div>
+                    <p>We've also sent a confirmation email with these details.</p>
+                    <div class="confirmation-actions">
+                        <a href="index.html" class="btn btn-secondary">Return to Home</a>
+                        <a href="account.html" class="btn btn-primary" id="view-account-btn">View Your Account</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-preview">
+            <div class="container">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <div class="faq-items">
+                    <div class="faq-item">
+                        <h3>How long will it take to receive my reading?</h3>
+                        <p>You will receive your tarot reading PDF via email within 24 hours of placing your order.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>What information will be in my reading?</h3>
+                        <p>Your reading will include images of your selected cards, detailed interpretations of each card, how they relate to your question, and guidance for moving forward.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Can I ask specific questions in my reading?</h3>
+                        <p>Yes! We encourage you to provide a specific question or area of focus to make your reading more relevant and insightful.</p>
+                    </div>
+                </div>
+                <div class="faq-more">
+                    <a href="faq.html" class="btn btn-outline">View All FAQs</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="container">
+                <h2>Ready for Spiritual Guidance?</h2>
+                <p>Choose your tarot spread above and begin your journey of insight and self-discovery today.</p>
+                <a href="#tarot-spreads" class="btn btn-primary">Select Your Spread</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Wildflowers Tarot</h2>
+                    <p>Spiritual guidance for life's journey</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-services">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="tarot-readings.html">Tarot Readings</a></li>
+                        <li><a href="palm-readings.html">Palm Readings</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p>Email: info@wildflowerstarot.com</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Wildflowers Tarot. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms-of-service.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/tarot-readings.js"></script>
+</body>
+</html>
